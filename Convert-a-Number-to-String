@@ -1,0 +1,8 @@
+function numberToString(num) {
+  return String(num);
+}
+
+// best practice
+// function numberToString(num) {
+//  return num.toString();
+// }
