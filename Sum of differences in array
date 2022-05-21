@@ -1,0 +1,17 @@
+
+function sumOfDifferences(arr) {
+// Sort the array elements in descending order
+	let revArr = arr.sort((a,b)=> b-a);
+	//console.log(revArr);
+// Subtract arr[i] from arr[i + 1] OR Subtract the consecutive pairs (map through the array 
+//to get the differences
+	let diffArr =[];
+	for (let i = 0; i < revArr.length - 1; i++){
+	diffArr.push(revArr[i] - revArr[i + 1]);
+}
+//console.log(diffArr);
+let total = diffArr.reduce((a, c) => a += c, 0);
+return total;
+// Add the elements from the new array
+	//console.log(total);
+}
