@@ -1,0 +1,21 @@
+P: What are the parameters? strings, numbers, characters?  Convert everything to string.
+
+R: Do I return a string? No
+Return a boolean value “true” if the string is a palindrome, false if not.
+
+E: “anna” → true
+    “Hello” → false
+    “12321” → true	
+
+P: Check if its a string or not and if not;  Convert all parameters into strings, 
+Convert the string into an array of separate characters 
+Reverse the array and then join it back into a string
+Compare the original sting to the reversed string
+If the org string is the same as the rev string; return true; if not return false
+
+function isPalindrome(line) {
+let converted = String(line);
+let strArr = converted.split(‘’).reverse().join(‘’);
+	return converted === strArr;
+}
+
