@@ -1,0 +1,9 @@
+function eachCons(array, n) {
+  let results = [];
+  
+  for (let i = 0; i < array.length - n + 1; i++){
+    results.push(array.slice(i, (n+i)));
+    
+  }
+	return results;
+}
