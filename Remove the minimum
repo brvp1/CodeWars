@@ -1,0 +1,8 @@
+function removeSmallest(numbers) {
+  let newArr = numbers.slice();
+  // OR let newArr = numbers.map(e => e);
+	let min = Math.min(...newArr);
+  newArr.splice(newArr.indexOf(min), 1);
+  return newArr;
+  //throw "TODO: removeSmallest";
+}
