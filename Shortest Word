@@ -1,0 +1,7 @@
+function findShort(s){
+//   let arr = s.split(' ');
+//   let lengthArr = arr.map(word => word.length);
+//   return Math.min(...lengthArr);
+  let arr = s.split(' ').sort((a,b) => a.length - b.length);
+  return arr[0].length;
+}
