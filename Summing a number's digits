@@ -1,0 +1,8 @@
+function sumDigits(number) {
+let nums = Math.abs(number).toString().split('');
+let res = 0;
+for (let i = 0; i < nums.length; i++){
+  res += Number(nums[i]);
+}
+  return res;
+}
