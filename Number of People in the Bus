@@ -1,0 +1,13 @@
+var number = function(busStops){
+  let peopleLeft = 0;
+  let array = busStops.flat();
+  for (let i = 0; i < array.length; i++){
+    if (i % 2 == 0){
+      peopleLeft += array[i];
+    } else{
+      peopleLeft -= array[i];
+    }
+  }
+  return peopleLeft;
+
+}
