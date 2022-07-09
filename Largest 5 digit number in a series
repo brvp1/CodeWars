@@ -1,0 +1,11 @@
+function solution(digits){
+  let max = 0;
+  
+  for (let i = 0; i < digits.length; i++){
+    let temp = Number(digits.substr(i, 5));
+    if (temp > max){
+      max = temp;
+    }
+  }
+  return max;
+}
