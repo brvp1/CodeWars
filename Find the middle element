@@ -1,0 +1,6 @@
+function gimme (triplet) {
+  let arr = triplet.slice();
+  let sortedArr = arr.sort((a,b) => a-b);
+  let middle = sortedArr[1];
+  return triplet.indexOf(middle);
+}
