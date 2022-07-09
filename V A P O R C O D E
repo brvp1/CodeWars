@@ -1,0 +1,8 @@
+function vaporcode(string) {
+  let result = "";
+  string = string.split(" ").join("");
+  for (let i = 0; i < string.length; i++){
+     result += string[i].toUpperCase() + "  ";
+  }
+  return result.trim();
+}
