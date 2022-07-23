@@ -1,0 +1,37 @@
+function findMissingLetter(array){
+  const alphabet = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+  const alphabet2 = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+//    array = [c, e]
+  
+  if (alphabet.includes(array[0])){
+    let startingIndex = alphabet.indexOf(array[0]);
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] !== alphabet[startingIndex + i]){
+        return alphabet[startingIndex + i];
+      }
+    }
+  }
+  if (alphabet2.includes(array[0])){
+    let startingIndex = alphabet2.indexOf(array[0]);
+    for (let i = 0; i < array.length; i++) {
+      if (array[i] !== alphabet2[startingIndex + i]){
+        return alphabet2[startingIndex + i];
+      }
+    }
+  }
+}
+
+// OR
+function findMissingLetter(array)
+{
+ const alphabet = (array[0] === array[0].toLowerCase())
+    ? 'abcdefghijklmnopqrstuvwxyz'
+    : 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  
+  for (let i = 0; i < array.length; i++) {
+      let startingIndex = alphabet.indexOf(array[0]);
+      if (array[i] !== alphabet[startingIndex + i]){
+        return alphabet[startingIndex + i];
+      }
+}
+  }
