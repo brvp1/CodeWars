@@ -1,0 +1,21 @@
+function isValidWalk(walk) {
+  if (walk.length !== 10) {
+    return false;
+  }
+  
+  let deltaX = 0;
+  let deltaY = 0;
+  for (let direction of walk) {
+   switch (direction) {
+       case 'n':
+        deltaY++; break;
+       case 's': 
+        deltaY--; break;
+       case 'e':
+        deltaX++; break;
+       case 'w':
+        deltaX--; break;
+   }
+    }
+  return deltaX === 0 && deltaY === 0;
+}
