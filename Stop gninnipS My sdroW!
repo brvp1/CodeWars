@@ -1,0 +1,18 @@
+function spinWords(string){
+  let strArr = string.split(' ');
+  let result = '';
+  
+  for (let word of strArr) {
+    
+    word.length < 5 ? 
+      result += word + ' '
+    : result += word.split('').reverse().join('') + ' '
+}
+  return result.trim();
+}
+
+// OR
+
+function spinWords(words){
+  return words.split(' ').map(w => w.length < 5 ? w : w.split('').reverse().join('')).join(' ');
+}
