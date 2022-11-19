@@ -1,0 +1,29 @@
+/*
+Complete the greatestProduct method so that it'll find the greatest product of five consecutive digits in the given string of digits.
+
+For example:
+
+greatestProduct("123834539327238239583") // should return 3240
+The input string always has more than five digits.
+
+Adapted from Project Euler.
+*/
+
+function greatestProduct(idx) {
+  let maxProduct = 0;
+  let hash = {}
+  for (let i = 0; i < 10; i++) {
+    hash[i] = i
+  }
+  
+  for (let i = 0; i < idx.length - 4; i++) {
+    const n1 = idx[i];
+    const n2 = idx[i+1];
+    const n3 = idx[i+2];
+    const n4 = idx[i+3];
+    const n5 = idx[i+4];
+    const product = n1 * n2 * n3 * n4 * n5;
+    if (product > maxProduct) maxProduct = product;
+    }
+    return maxProduct;
+}
